@@ -14,7 +14,7 @@
         </b-container>
         <b-container fluid class="list-game-wrapper">
             <b-row>
-                <b-col class="game-item-wrapper" cols="3">
+                <b-col class="game-item-wrapper" lg="3" cols="6">
                     <b-card
                     overlay
                     img-src="./../assets/images/images/game-espace.png"
@@ -33,10 +33,10 @@
                         </div>
                     </b-card>
                 </b-col>
-                <b-col class="game-item-wrapper" cols="3">
+                <b-col class="game-item-wrapper" lg="3" cols="6">
                     <b-card
                     overlay
-                    img-src="./../assets/images/game-espace.png"
+                    img-src="./../assets/images/images/game-espace.png"
                     style="max-width: 25rem;"
                     class="game-item mb-2"
                     >   <div class="game-intro-text">
@@ -52,10 +52,10 @@
                         </div>
                     </b-card>
                 </b-col>
-                <b-col class="game-item-wrapper" cols="3">
+                <b-col class="game-item-wrapper" lg="3" cols="6">
                     <b-card
                     overlay
-                    img-src="./../assets/images/game-espace.png"
+                    img-src="./../assets/images/images/game-espace.png"
                     style="max-width: 25rem;"
                     class="game-item mb-2"
                     >   <div class="game-intro-text">
@@ -71,10 +71,10 @@
                         </div>
                     </b-card>
                 </b-col>
-                <b-col class="game-item-wrapper" cols="3">
+                <b-col class="game-item-wrapper" lg="3" cols="6">
                     <b-card
                     overlay
-                    img-src="./../assets/images/game-espace.png"
+                    img-src="./../assets/images/images/game-espace.png"
                     style="max-width: 25rem;"
                     class="game-item mb-2"
                     >   <div class="game-intro-text">
@@ -90,10 +90,10 @@
                         </div>
                     </b-card>
                 </b-col>
-                <b-col class="game-item-wrapper" cols="3">
+                <b-col class="game-item-wrapper" lg="3" cols="6">
                     <b-card
                     overlay
-                    img-src="./../assets/images/game-espace.png"
+                    img-src="./../assets/images/images/game-espace.png"
                     style="max-width: 25rem;"
                     class="game-item mb-2"
                     >   <div class="game-intro-text">
@@ -109,10 +109,48 @@
                         </div>
                     </b-card>
                 </b-col>
-                <b-col class="game-item-wrapper" cols="3">
+                <b-col class="game-item-wrapper" lg="3" cols="6">
                     <b-card
                     overlay
-                    img-src="./../assets/images/game-espace.png"
+                    img-src="./../assets/images/images/game-espace.png"
+                    style="max-width: 25rem;"
+                    class="game-item mb-2"
+                    >   <div class="game-intro-text">
+                            <b-card-title>
+                                <h2>
+                                    E-Space
+                                </h2>
+                            </b-card-title>
+                            <b-card-text>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </b-card-text>
+                        </div>
+                    </b-card>
+                </b-col>
+                <b-col class="game-item-wrapper" lg="3" cols="6">
+                    <b-card
+                    overlay
+                    img-src="./../assets/images/images/game-espace.png"
+                    style="max-width: 25rem;"
+                    class="game-item mb-2"
+                    >   <div class="game-intro-text">
+                            <b-card-title>
+                                <h2>
+                                    E-Space
+                                </h2>
+                            </b-card-title>
+                            <b-card-text>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </b-card-text>
+                        </div>
+                    </b-card>
+                </b-col>
+                <b-col class="game-item-wrapper" lg="3" cols="6">
+                    <b-card
+                    overlay
+                    img-src="./../assets/images/images/game-espace.png"
                     style="max-width: 25rem;"
                     class="game-item mb-2"
                     >   <div class="game-intro-text">

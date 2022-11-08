@@ -1,7 +1,7 @@
 <template>
     <b-container class="about-us-wrapper">
         <b-row class="detail-about-us my-5">
-            <b-col class="left-box">
+            <b-col class="left-box" cols="12" lg="6">
                 <b-row class="title mb-3">
                     <h2>About Us</h2>
                 </b-row>
@@ -35,7 +35,7 @@
                     </b-row>
                 </b-row>
             </b-col>
-            <b-col class="right-box">
+            <b-col class="right-box" cols="12" lg="6">
                 <b-row>
                     <b-col class="icon" sm="2">
                         <b-avatar src="./../assets/images/icons/calendar.png"></b-avatar>
@@ -100,8 +100,6 @@ export default {
     font-weight: 900;
     font-size: 60px;
     line-height: 60px;
-    /* or 100% */
-    
     letter-spacing: 3.6px;
     
     /* Neutral/Black */
@@ -114,13 +112,7 @@ export default {
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
-    /* or 20px */
-
-
-    /* Neutral/N500 */
-
     color: #757575;
-
 }
 .about-us-wrapper .left-box .count {
     margin-left: 10px;

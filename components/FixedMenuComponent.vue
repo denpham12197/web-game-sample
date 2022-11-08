@@ -1,26 +1,45 @@
 <!-- Please remove this file from your project -->
 <template>
   <div>
-    <b-navbar class="fixed-menu" toggleable="lg" type="dark" variant="faded" fixed="top">
+    <b-navbar class="fixed-menu" :class="isExpanded?'expand-menu':''" toggleable="lg" type="dark" variant="faded" fixed="top">
       <b-navbar-brand href="#">
+        <!-- No responsive -->
         <img class="logo" src="./../assets/images/logos/logo-3-eagle.png"/>
+
+        <!-- Responsive button language-->
+        <b-dropdown class="responsive-language" no-caret>
+          <template #button-content>
+            <img src="./../assets/images/images/US.png"/>
+            <b-icon scale="0.7" class="icon-drop-down" icon="caret-down-fill"></b-icon>
+          </template>
+          <b-dropdown-item>
+            <img src="./../assets/images/images/US.png"/>EN
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <img src="./../assets/images/images/vietnam.png"/> VIE
+          </b-dropdown-item>
+        </b-dropdown>
       </b-navbar-brand>
-  
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-  
-      <b-collapse id="nav-collapse" is-nav>
+
+      <b-navbar-toggle class="button-toggle"  target="nav-collapse" @click="isExpanded=!isExpanded">
+          <b-icon v-if="isExpanded" scale="1.5" class="menu-icon icon-close" icon="x-lg"></b-icon>
+          <b-icon v-else scale="2" class="menu-icon" icon="list"></b-icon>
+      </b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" class="right-menu" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav>
-            <b-nav-item class="mx-5" href="#">ABOUT US</b-nav-item>
-            <b-nav-item class="mx-5" href="#">GAMES</b-nav-item>
-            <b-nav-item class="mx-5" href="#">PARTNERS</b-nav-item>
-            <b-nav-item class="mx-5" href="#">CONTACT US</b-nav-item>
+            <b-nav-item class="mx-5 menu-item" href="#"><span>ABOUT US</span></b-nav-item>
+            <b-nav-item class="mx-5 menu-item" href="#"><span>GAMES</span></b-nav-item>
+            <b-nav-item class="mx-5 menu-item" href="#"><span>PARTNERS</span></b-nav-item>
+            <b-nav-item class="mx-5 menu-item" href="#"><span>CONTACT US</span></b-nav-item>
           </b-navbar-nav>
-          <b-navbar-nav>
+          <b-navbar-nav class="language">
             <img src="./../assets/images/images/US.png"/>
           </b-navbar-nav>
           <b-nav-item-dropdown
+            class="language"
             right>
             <b-dropdown-item href="#">
               <img src="./../assets/images/images/US.png"/>
@@ -38,9 +57,14 @@
 </template>
 
 <script>
-export default {
-  name: 'FixedMenuComponent',
-}
+  export default {
+    name: 'FixedMenuComponent',
+    data() {
+      return {
+        isExpanded: false
+      }
+    }
+  }
 </script>
 <style>
 .fixed-menu {
@@ -48,5 +72,55 @@ export default {
 }
 .fixed-menu .logo {
   scale: 1;
+}
+.menu-item span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.fixed-menu .button-toggle {
+  border: none;
+}
+.icon-close {
+  color: #000000 !important;
+}
+.fixed-menu .menu-icon {
+  color: #FFFFFF;
+}
+.responsive-language {
+  display: none;
+}
+.responsive-language .icon-drop-down {
+  color: #000000;
+  vertical-align: middle !important;
+}
+/*Deep css*/
+.responsive-language .dropdown-toggle {
+  background: #F6F6F6;
+  border-radius: 8px;
+  border: 1px solid #AFAFAF;
+}
+/*Responsive*/
+@media only screen and (max-width: 992px) {
+  .menu-item span {
+    color: #000000;
+  }
+  .language {
+    display: none;
+  }
+  .expand-menu .logo {
+    display: none;
+  }
+  .expand-menu .responsive-language {
+    display: inline-block;
+  }
+  .expand-menu {
+    background: #FFFFFF;
+  }
+  .right-menu {
+    text-align: center;
+  }
 }
 </style>

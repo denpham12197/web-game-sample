@@ -9,23 +9,26 @@
       <b-row class="countdown-box">
         <b-row class="countdown-time">
           <b-col>
-            <span class="countdown-number mx-2">30</span>
-            <span class="countdown-unit">Days</span>
+            <b-row><span class="countdown-number">30</span></b-row>
+            <b-row><span class="countdown-unit">Days</span></b-row>
           </b-col>
-          <span class="countdown-spacer">:</span>
+          <b-col><span class="countdown-spacer">:</span></b-col>
+
           <b-col>
-            <span class="countdown-number mx-2">18</span>
-            <span class="countdown-unit">Hours</span>
+            <b-row><span class="countdown-number">18</span></b-row>
+            <b-row><span class="countdown-unit">Hours</span></b-row>
           </b-col>
-          <span class="countdown-spacer">:</span>
+          <b-col><span class="countdown-spacer">:</span></b-col>
+
           <b-col>
-            <span class="countdown-number mx-2">20</span>
-            <span class="countdown-unit">Minutes</span>
+            <b-row><span class="countdown-number">20</span></b-row>
+            <b-row><span class="countdown-unit">Minutes</span></b-row>
           </b-col>
-          <span class="countdown-spacer">:</span>
+          <b-col><span class="countdown-spacer">:</span></b-col>
+
           <b-col>
-            <span class="countdown-number mx-2">11</span>
-            <span class="countdown-unit">Seconds</span>
+            <b-row><span class="countdown-number">11</span></b-row>
+            <b-row><span class="countdown-unit">Seconds</span></b-row>
           </b-col>
         </b-row>
       </b-row>
@@ -37,9 +40,8 @@
         </p>
       </b-row>
       <b-row class="new-letter-input">
-        <label class="sr-only" for="inline-form-input-username">Username</label>
         <b-input-group append="→" class="mb-2 mr-sm-2 mb-sm-0">
-          <b-form-input  id="inline-form-input-username" size="lg" placeholder="Enter your email"></b-form-input>
+          <b-form-input  size="lg" placeholder="Enter your email"></b-form-input>
         </b-input-group>
       </b-row>
     </b-container>
@@ -68,43 +70,54 @@
 }
 .header-thumb-wrapper .countdown-wrapper {
   position: absolute;
-  max-width: 30vw;
-  top: 19vw;
+  max-width: 45vw;
+  top: 17vw;
   left: 35vw;
 }
 .countdown-wrapper .getting-ready-text {
   justify-content: center;
 }
 .countdown-wrapper h2 {
-  color: #fff;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4vw;
+  /* identical to box height, or 150% */
+
   text-align: center;
+  letter-spacing: 0.6px;
+
+  /* Neutral/White */
+
+  color: #FFFFFF;
+
 }
 .countdown-wrapper .countdown-box {
   background: #FFFFFF;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 21px;
   height: 10vw;
-  width: 30vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 4vw;
 }
 .countdown-wrapper .countdown-time {
-  padding: 30px;
+  padding: 0 4vw;
+  flex: 1;
+  width: 100%;
+}
+.countdown-time .row {
+  justify-content: center;
 }
 .countdown-wrapper .countdown-number {
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 900;
   font-size: 3vw;
-  line-height: 64px;
-  /* or 107% */
-  
-  text-align: center;
+  line-height: 4.5vw;
+  justify-content: center;
   letter-spacing: 4.8px;
-  
-  /* Neutral/Black */
-  
   color: #000000;
 }
 .countdown-wrapper .countdown-unit {
@@ -112,45 +125,42 @@
   font-style: normal;
   font-weight: 700;
   font-size: 1vw;
-  line-height: 19px;
-  /* identical to box height */
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: -0.651724px;
-
-  /* Neutral/Black */
-
   color: #000000;
-  justify-content: center;
 }
 .countdown-wrapper .countdown-spacer {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 3vw;
-  line-height: 50px;
+  line-height: 4.5vw;
   text-align: center;
-  letter-spacing: -0.651724px;
   color: #000000;
 }
 .countdown-wrapper .new-letter-description {
   justify-content: center;
+  width: 100%;
 }
-.new-letter-description p {
+.countdown-wrapper .new-letter-description p {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 126%;
-  /* or 23px */
-
   text-align: center;
-
-  /* Neutral/White */
-
   color: #FFFFFF;
   width: 85%;
+}
+.countdown-wrapper .new-letter-input {
+  width: 100%;
+  justify-content: center;
+}
+.new-letter-input .input-group {
+  max-width: 85%;
+}
+@media only screen and (max-width: 992px) {
+  .fairy-image {
+    position: static !important;
+    margin-left: 10vw;
+    margin-top: 5vw;
+  }
 }
 </style>
