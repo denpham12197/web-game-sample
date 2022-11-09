@@ -1,6 +1,6 @@
 <template>
     <b-container class="about-us-wrapper">
-        <b-row class="detail-about-us my-5">
+        <b-row class="detail-about-us mb-5">
             <b-col class="left-box" cols="12" lg="6">
                 <b-row class="title mb-3">
                     <h2>About Us</h2>
@@ -14,33 +14,35 @@
                     Explore a whole new world of gaming on Etech.
                     </p>
                 </b-row>
-                <b-row class="count mb-5">
-                    <b-row class="block-line">
-                        <h2>
-                            <span>600</span>
-                            <span class="small-character">M</span>
-                            <span>+</span>
-                        </h2>
-                    </b-row>
-                    <b-row class="block-line">
-                        <span class="count-unit">User</span>
-                    </b-row>
-                </b-row>
-                <b-row class="count mb-5">
-                    <b-row class="block-line">
-                        <h2>135+</h2>
-                    </b-row>
-                    <b-row class="block-line">
-                        <span class="count-unit">Games</span>
-                    </b-row>
+                <b-row class="statistic" cols="2">
+                    <b-col cols="6" sm="12">
+                        <b-row>
+                            <h2 >
+                                <span>600</span>
+                                <sub>M</sub>
+                                <span>+</span>
+                            </h2>
+                        </b-row>
+                        <b-row>
+                            <span class="count-unit">User</span>
+                        </b-row>
+                    </b-col>
+                    <b-col cols="6" sm="12">
+                        <b-row>
+                            <h2>135+</h2>
+                        </b-row>
+                        <b-row>
+                            <span class="count-unit">Games</span>
+                        </b-row>
+                    </b-col>
                 </b-row>
             </b-col>
             <b-col class="right-box" cols="12" lg="6">
                 <b-row>
-                    <b-col class="icon" sm="2">
-                        <b-avatar src="./../assets/images/icons/calendar.png"></b-avatar>
+                    <b-col cols="3" sm="2">
+                        <b-avatar variant="info" icon="calendar2-day-fill" class="right-box-icon mr-3"></b-avatar>
                     </b-col>
-                    <b-col class="content" sm="10">
+                    <b-col class="content" scale="2" cols="9" sm="10">
                         <b-row class="title">
                             <h3>24 - Hour</h3>
                         </b-row>
@@ -50,10 +52,10 @@
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col class="icon" sm="2">
-                        <b-avatar src="./../assets/images/icons/icon-design.png"></b-avatar>
+                    <b-col cols="3" sm="2">
+                        <b-avatar variant="info" icon="stack" class="right-box-icon mr-3"></b-avatar>
                     </b-col>
-                    <b-col class="content" sm="10">
+                    <b-col class="content" cols="9" sm="10">
                         <b-row class="title">
                             <h3>Design</h3>
                         </b-row>
@@ -63,10 +65,10 @@
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col class="icon" sm="2">
-                        <b-avatar src="./../assets/images/icons/icon-team.png"></b-avatar>
+                    <b-col class="icon" cols="3" sm="2">
+                        <b-avatar variant="info" icon="people-fill" class="right-box-icon mr-3"></b-avatar>
                     </b-col>
-                    <b-col class="content" sm="10">
+                    <b-col class="content" cols="9" sm="10">
                         <b-row class="title">
                             <h3>Team</h3>
                         </b-row>
@@ -77,11 +79,13 @@
                 </b-row>
             </b-col>
         </b-row>
-        <b-row >
-            <div class="witch-image-wrapper">
-                <img class="witch-image" src="./../assets/images/images/witch.png" />
-                <img class="pin-map-image" src="./../assets/images/images/pin-map.png"/>
-            </div>
+        <b-row class="w-100 witch-image-wrapper" no-gutters>
+            <b-row class="w-100">
+                <img class="w-100 witch-image" src="./../assets/images/images/witch.png" />
+            </b-row>
+            <b-row class="w-100">
+                <img class="w-100 pin-map-image " src="./../assets/images/images/pin-map.png"/>
+            </b-row>
         </b-row>
     </b-container>
 </template>
@@ -94,50 +98,33 @@ export default {
 .about-us-wrapper .left-box {
     padding: 0px 30px;
 }
-.about-us-wrapper .left-box .title h2 {
+.left-box .title h2 {
     font-family: 'Playfair Display';
-    font-style: normal;
     font-weight: 900;
     font-size: 60px;
     line-height: 60px;
     letter-spacing: 3.6px;
-    
-    /* Neutral/Black */
-    
     color: #000000;
 }
-.about-us-wrapper .left-box .description p {
+.left-box .statistic h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #079BEE;
+    font-size: 4vw;
+}
+.left-box .description p,
+.right-box .description p {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 140%;
     color: #757575;
 }
-.about-us-wrapper .left-box .count {
-    margin-left: 10px;
+.right-box-icon {
+    color: #000000;
 }
-.about-us-wrapper .left-box .count h2 {
+.count-unit {
     font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 80px;
-    line-height: 30px;
-    letter-spacing: -1px;
-    color: #079BEE;
-    margin-bottom: 0px;
-}
-.left-box .count .small-character {
-    font-size: 40px;
-}
-.left-box .count .block-line {
-    width: 100%;
-    margin-top: 10px;
-    height: 45px;
-}
-.left-box .count .count-unit {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
@@ -147,19 +134,36 @@ export default {
     background: #EEEEEE;
     padding: 80px 30px;
 }
-.about-us-wrapper .witch-image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 40vw;
+.witch-image-wrapper {
+    justify-content: center;
+    margin-top: -10vw;
 }
-.witch-image-wrapper .witch-image {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 18vw;
+.witch-image {
+    scale: 0.5;
+    min-width: 25rem;
+    min-height: 20rem;
 }
-.witch-image-wrapper .pin-map-image {
-    position: absolute;
-    top: 20vw;
+.pin-map-image {
+    min-width: 25rem;
+    min-height: 8rem;
+    margin-top: -20vw;
+}
+.statistic sub {
+    font-size: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+    .left-box {
+        margin-bottom: 5rem;
+    }
+    .left-box .statistic h2 {
+        font-size: 3rem;
+    }
+    .pin-map-image {
+        margin-top: -25vw;
+    }
+    .witch-image-wrapper {
+        margin-top: -15vw;
+    }
 }
 </style>

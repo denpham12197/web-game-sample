@@ -1,5 +1,5 @@
 <template>
-  <div>
+<div class="mb-5">
   <b-container fluid>
     <b-row class="justify-center">
       <!-- Header Thumb Background -->
@@ -127,6 +127,7 @@
   padding: 0 4vw;
   flex: 1;
   width: 100%;
+  justify-content: center;
 }
 .countdown-time .row {
   justify-content: center;
@@ -203,6 +204,7 @@
   }
   .countdown-time .col,  .countdown-time .col-1{
     padding: 0 !important;
+    flex-grow: 0.2;
   }
   .countdown-box {
     width: 80%;
@@ -215,7 +217,7 @@
     line-height: 2.5rem;
   }
   .greeting-title h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .new-letter {
     width: 80%;
@@ -230,10 +232,9 @@
     position: static;
     margin-top: -15rem;
     margin-left: 10vw;
+    margin-right: 10vw;
     min-height: 20rem;
     min-width: 30rem;
-    overflow: visible;
-    object-fit: cover;
     scale: 0.75
   }
 }

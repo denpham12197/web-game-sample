@@ -121,6 +121,14 @@
   }
   .right-menu {
     text-align: center;
+    height: 100vh;
+  }
+  .menu-item {
+    border-bottom: solid 1px #EEEEEE;
+    padding: 0.7rem 0;
+  }
+  .menu-item:last-child {
+    border-bottom: none
   }
 }
 </style>
