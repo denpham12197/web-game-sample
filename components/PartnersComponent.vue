@@ -57,6 +57,7 @@
 }
 .image {
     scroll-snap-align: center;
+    flex: 1;
 }
 .btn-icon {
     position: absolute;
