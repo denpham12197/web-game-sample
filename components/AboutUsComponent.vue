@@ -1,17 +1,23 @@
 <template>
-    <b-container class="about-us-wrapper">
-        <b-row class="detail-about-us mb-5">
-            <b-col class="left-box" cols="12" lg="6">
+    <b-container class="component-wrapper">
+        <!-- Summary introduction -->
+        <b-row class="mb-5">
+            <!-- Left box -->
+            <b-col class="left-box" lg="6" cols="12" >
+                <!-- Title -->
                 <b-row class="title mb-3">
                     <h2>{{$t('About Us')}}</h2>
                 </b-row>
+                <!-- Description -->
                 <b-row class="description mb-5">
                     <p>
                         {{$t('Browse our selection of free online games and have a great time without leaving the site! Our Kids Games option also includes game reviews, extensive game cheats and walkthroughs, and much more. We have exclusive free downloads, videos, and articles as well. Etech reviews the most popular kids games from all the most popular video gaming platforms, so you don’t need to search around for fun anywhere else on the Internet. Explore a whole new world of gaming on Etech.')}}
                     </p>
                 </b-row>
-                <b-row class="statistic" cols="2">
-                    <b-col cols="6" sm="12">
+                <!-- Statistical -->
+                <b-row class="statistic">
+                    <!-- User -->
+                    <b-col class="mb-3" cols="6" md="12">
                         <b-row>
                             <h2 >
                                 <span>600</span>
@@ -23,7 +29,8 @@
                             <span class="count-unit">{{$t('Users')}}</span>
                         </b-row>
                     </b-col>
-                    <b-col cols="6" sm="12">
+                    <!-- Game -->
+                    <b-col class="mb-3" cols="6" md="12">
                         <b-row>
                             <h2>135+</h2>
                         </b-row>
@@ -33,12 +40,15 @@
                     </b-col>
                 </b-row>
             </b-col>
-            <b-col class="right-box" cols="12" lg="6">
+
+            <!-- Right box -->
+            <b-col class="right-box" lg="6" cols="12">
+                <!-- Section 1 -->
                 <b-row>
-                    <b-col cols="3" sm="2">
+                    <b-col sm="2" cols="3">
                         <b-avatar variant="info" icon="calendar2-day-fill" class="right-box-icon mr-3"></b-avatar>
                     </b-col>
-                    <b-col class="content" scale="2" cols="9" sm="10">
+                    <b-col scale="2" cols="9" sm="10">
                         <b-row class="title">
                             <h3>{{$t('24 - Hour')}}</h3>
                         </b-row>
@@ -47,11 +57,12 @@
                         </b-row>
                     </b-col>
                 </b-row>
+                <!-- Section 2 -->
                 <b-row>
-                    <b-col cols="3" sm="2">
+                    <b-col sm="2" cols="3">
                         <b-avatar variant="info" icon="stack" class="right-box-icon mr-3"></b-avatar>
                     </b-col>
-                    <b-col class="content" cols="9" sm="10">
+                    <b-col sm="10" cols="9">
                         <b-row class="title">
                             <h3>{{$t('Design')}}</h3>
                         </b-row>
@@ -60,11 +71,12 @@
                         </b-row>
                     </b-col>
                 </b-row>
+                <!-- Section 3 -->
                 <b-row>
-                    <b-col class="icon" cols="3" sm="2">
+                    <b-col sm="2" cols="3">
                         <b-avatar variant="info" icon="people-fill" class="right-box-icon mr-3"></b-avatar>
                     </b-col>
-                    <b-col class="content" cols="9" sm="10">
+                    <b-col sm="10" cols="9">
                         <b-row class="title">
                             <h3>{{$t('Team')}}</h3>
                         </b-row>
@@ -75,6 +87,7 @@
                 </b-row>
             </b-col>
         </b-row>
+        <!-- Witch image -->
         <b-row class="w-100 witch-image-wrapper" no-gutters>
             <b-row class="w-100">
                 <img class="w-100 witch-image" src="./../assets/images/images/witch.png" />
@@ -90,8 +103,8 @@ export default {
     "name": "AboutUsComponent"
 }
 </script>
-<style>
-.about-us-wrapper .left-box {
+<style scoped>
+.left-box {
     padding: 0px 30px;
 }
 .left-box .title h2 {
@@ -102,31 +115,32 @@ export default {
     letter-spacing: 3.6px;
     color: #000000;
 }
-.left-box .statistic h2 {
+.left-box .description p,
+.right-box .description p,
+.left-box .statistic h2,
+.count-unit {
     font-family: 'Montserrat';
+}
+.left-box .statistic h2 {
     font-weight: 700;
     color: #079BEE;
     font-size: 4vw;
 }
 .left-box .description p,
 .right-box .description p {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     color: #757575;
 }
-.right-box-icon {
+.right-box-icon,
+.count-unit {
     color: #000000;
 }
 .count-unit {
-    font-family: 'Montserrat';
     font-weight: 700;
     font-size: 24px;
-    line-height: 30px;
-    color: #000000;
 }
-.about-us-wrapper .right-box {
+.component-wrapper .right-box {
     background: #EEEEEE;
     padding: 80px 30px;
 }
@@ -148,6 +162,7 @@ export default {
     font-size: 50%;
 }
 
+/*Responsive css*/
 @media only screen and (max-width: 992px) {
     .left-box {
         margin-bottom: 5rem;

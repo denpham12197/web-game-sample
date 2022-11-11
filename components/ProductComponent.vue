@@ -2,14 +2,17 @@
     <b-card
         overlay
         :img-src="require(`~/assets/images/images/${src}`)"
-        class="game-item mb-2"
+        class="product-item mb-2"
     >
-        <div class="game-intro-text">
+        <div class="product-summary-text">
+            <!-- Game title -->
             <b-card-title>
                 <h2>
                     {{title}}
                 </h2>
             </b-card-title>
+
+            <!-- Game description -->
             <b-card-text>
                 <p>{{description}}</p>
             </b-card-text>
@@ -18,6 +21,7 @@
 </template>
 <script>
 export default {
+    // props
     props: {
         src: {
             type: String,
@@ -34,20 +38,16 @@ export default {
     }
 }
 </script>
-<style>
-.game-item h2, .game-item p {
+<style scoped>
+.product-item h2,
+.product-item p {
     color: #FFFFFF;
 }
-/*Deep css*/
-.game-item .card-img {
-    border-radius: 20px;
-}
-
-.product-image {
-    border-radius: 15px;
-    max-width: 3vw;
-}
-.game-intro-text p {
+.product-summary-text p {
     padding-right: 15px;
+}
+/*Deep css*/
+.product-item .card-img {
+    border-radius: 20px;
 }
 </style>
