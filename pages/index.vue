@@ -4,7 +4,7 @@
     <HeaderThumbComponent />
     <AboutUsComponent/>
     <ListProductComponent/>
-    <ListPartnersComponent/>
+    <PartnersComponent/>
     <FooterComponent />
   </div>
 </template>
@@ -17,5 +17,6 @@ export default {
 <style>
 .web-game-wrapper {
   overflow: hidden;
+  min-width: 390px;
 }
 </style>

@@ -1,64 +1,69 @@
 <template>
     <b-container fluid class="footer-wrapper">
         <b-row class="info-summary" align-h="center">
-            <b-col class="info-item" cols="3">
-                <b-col cols="8">
-                    <b-row>
+            <b-col class="info-item" xl="4" lg="12">
+                <div class="contact-wrapper">
+                    <div class="logo">
                         <img src="./../assets/images/logos/footer-logo.png"/>
-                    </b-row>
-                    <b-row class="network-wrapper">
-                        <b-col cols="3" class="logo-network">
+                    </div>
+                    <div class="contact-types">
+                        <div>
                             <img src="./../assets/images/logos/logo-twitter.png"/>
-                        </b-col>
-                        <b-col cols="3" class="logo-network">
+                        </div>
+                        <div>
                             <img src="./../assets/images/logos/logo-facebook.png"/>
-                        </b-col>
-                        <b-col cols="3" class="logo-network">
+                        </div>
+                        <div>
                             <img src="./../assets/images/logos/logo-instagram.png"/>
+                        </div>
+                    </div>
+
+                </div>
+            </b-col>
+            <b-col xl="4" class="info-item address-wrapper" lg="12">
+                <b-col cols="12" md="10" class="mx-auto">
+                    <b-row>
+                        <h2>Address</h2>
+                    </b-row>
+                    <b-row class="info-detail">
+                        <b-col class="icon" cols="2" lg="3">
+                            <img src="./../assets/images/icons/location.png"/>
+                        </b-col>
+                        <b-col class="content" cols="10" lg="9">
+                            <b-row>
+                                <p>Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US</p>
+                            </b-row>
+                            <b-row>
+                                <p>20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam</p>
+                            </b-row>
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col class="icon" cols="2" lg="3">
+                            <img src="./../assets/images/icons/mobile.png"/>
+                        </b-col>
+                        <b-col class="content" cols="10" lg="9">
+                            <b-row class="description">
+                                <p>(+1) 555-0108-000 or (+236) 555-0108</p>
+                            </b-row>
                         </b-col>
                     </b-row>
                 </b-col>
             </b-col>
-            <b-col cols="3" class="info-item">
-                <b-row>
-                    <h2>Address</h2>
-                </b-row>
-                <b-row class="info-detail">
-                    <b-col class="icon" sm="2">
-                        <img src="./../assets/images/icons/location.png"/>
-                    </b-col>
-                    <b-col class="content" sm="10">
-                        <b-row>
-                            <p>Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US</p>
-                        </b-row>
-                        <b-row>
-                            <p>20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam</p>
-                        </b-row>
-                    </b-col>
-                </b-row>
-                <b-row>
-                    <b-col class="icon" sm="2">
-                        <img src="./../assets/images/icons/mobile.png"/>
-                    </b-col>
-                    <b-col class="content" sm="10">
-                        <b-row class="description">
-                            <p>(+1) 555-0108-000 or (+236) 555-0108</p>
-                        </b-row>
-                    </b-col>
-                </b-row>
-            </b-col>
-            <b-col cols="3" class="info-item">
-                <b-row>
-                    <h2>Subcribe</h2>
-                </b-row>
-                <b-row class="info-detail">
-                    <b-row class="info-subscribe">
-                        <p>Subscribe to our newsletter and be the first to know about our updates</p>
+            <b-col xl="4" class="info-item" lg="12">
+                <b-col col class="subcribe-wrapper mx-auto" cols="12" md="10">
+                    <b-row class="w-100">
+                        <h2>Subcribe</h2>
                     </b-row>
-                    <b-row class="info-subscribe">
-                        <b-form-input size="lg" placeholder="Enter your email" class="input-subscribe" />
+                    <b-row class="info-detail w-100">
+                        <b-row class="info-subscribe">
+                            <p>Subscribe to our newsletter and be the first to know about our updates</p>
+                        </b-row>
+                        <b-row class="info-subscribe">
+                            <b-form-input size="lg" placeholder="Enter your email" class="input-subscribe" />
+                        </b-row>
                     </b-row>
-                </b-row>
+                </b-col>
                 
             </b-col>
         </b-row>
@@ -79,10 +84,10 @@
 .footer-wrapper .info-summary {
     background-image: url('./../assets/images/backgrounds/footer-background.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
-    height: 23vw;
     margin: 0;
+    padding-bottom: 3rem;
 }
 .footer-wrapper .copy-right {
     justify-content: center;
@@ -112,6 +117,7 @@
 }
 .info-summary .network-wrapper .logo-network {
     padding: 0;
+    flex-basis: auto;
 }
 .footer-wrapper h2, .footer-wrapper p {
     color: #FFFFFF;
@@ -130,5 +136,30 @@
 }
 .footer-wrapper .input-subscribe::placeholder {
     color: #FFFFFF;
+}
+.contact-wrapper {
+    margin: auto;
+}
+.contact-wrapper, .contact-wrapper .logo {
+    display: block;
+    max-width: fit-content;
+}
+.contact-wrapper .contact-types {
+    display: flex;
+}
+.contact-types div {
+    flex-grow: 1;
+    text-align: center;
+}
+@media only screen and (max-width: 992px) {
+    .footer-wrapper .info-summary {
+        background-size: cover
+    }
+    .info-summary .network-wrapper .logo-network {
+        flex-basis: content !important;
+    }
+    .copy-right {
+        padding: 2rem 0;
+    }
 }
 </style>
