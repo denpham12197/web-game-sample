@@ -13,10 +13,12 @@
             <b-icon scale="0.7" class="icon-drop-down" icon="caret-down-fill"></b-icon>
           </template>
           <b-dropdown-item>
-            <img src="./../assets/images/images/US.png"/>EN
+            <img src="./../assets/images/images/US.png"/>
+            <nuxt-link :to="switchLocalePath('en')">{{$t('English')}}</nuxt-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <img src="./../assets/images/images/vietnam.png"/> VIE
+            <img src="./../assets/images/images/vietnam.png"/>
+            <nuxt-link :to="switchLocalePath('vie')">{{$t('Vietnamese')}}</nuxt-link>
           </b-dropdown-item>
         </b-dropdown>
       </b-navbar-brand>
@@ -30,10 +32,10 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav>
-            <b-nav-item class="mx-5 menu-item" href="#"><span>ABOUT US</span></b-nav-item>
-            <b-nav-item class="mx-5 menu-item" href="#"><span>GAMES</span></b-nav-item>
-            <b-nav-item class="mx-5 menu-item" href="#"><span>PARTNERS</span></b-nav-item>
-            <b-nav-item class="mx-5 menu-item" href="#"><span>CONTACT US</span></b-nav-item>
+            <b-nav-item class="mx-5 menu-item" href="#"><span>{{$t('ABOUT US')}}</span></b-nav-item>
+            <b-nav-item class="mx-5 menu-item" href="#"><span>{{$t('GAMES')}}</span></b-nav-item>
+            <b-nav-item class="mx-5 menu-item" href="#"><span>{{$t('PARTNERS')}}</span></b-nav-item>
+            <b-nav-item class="mx-5 menu-item" href="#"><span>{{$t('CONTACT US')}}</span></b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav class="language">
             <img src="./../assets/images/images/US.png"/>
@@ -43,11 +45,11 @@
             right>
             <b-dropdown-item href="#">
               <img src="./../assets/images/images/US.png"/>
-              EN
+              <nuxt-link :to="switchLocalePath('en')">{{$t('English')}}</nuxt-link>
             </b-dropdown-item>
             <b-dropdown-item href="#">
               <img src="./../assets/images/images/vietnam.png"/>
-              VIE
+              <nuxt-link :to="switchLocalePath('vie')">{{$t('Vietnamese')}}</nuxt-link>
             </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>

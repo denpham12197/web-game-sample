@@ -3,15 +3,11 @@
         <b-row class="detail-about-us mb-5">
             <b-col class="left-box" cols="12" lg="6">
                 <b-row class="title mb-3">
-                    <h2>About Us</h2>
+                    <h2>{{$t('About Us')}}</h2>
                 </b-row>
                 <b-row class="description mb-5">
                     <p>
-                    Browse our selection of free online games and have a great time without leaving the site! 
-                    Our Kids Games option also includes game reviews, extensive game cheats and walkthroughs, and much more. 
-                    We have exclusive free downloads, videos, and articles as well. 
-                    Etech reviews the most popular kids games from all the most popular video gaming platforms, so you don’t need to search around for fun anywhere else on the Internet. 
-                    Explore a whole new world of gaming on Etech.
+                        {{$t('Browse our selection of free online games and have a great time without leaving the site! Our Kids Games option also includes game reviews, extensive game cheats and walkthroughs, and much more. We have exclusive free downloads, videos, and articles as well. Etech reviews the most popular kids games from all the most popular video gaming platforms, so you don’t need to search around for fun anywhere else on the Internet. Explore a whole new world of gaming on Etech.')}}
                     </p>
                 </b-row>
                 <b-row class="statistic" cols="2">
@@ -24,7 +20,7 @@
                             </h2>
                         </b-row>
                         <b-row>
-                            <span class="count-unit">User</span>
+                            <span class="count-unit">{{$t('Users')}}</span>
                         </b-row>
                     </b-col>
                     <b-col cols="6" sm="12">
@@ -32,7 +28,7 @@
                             <h2>135+</h2>
                         </b-row>
                         <b-row>
-                            <span class="count-unit">Games</span>
+                            <span class="count-unit">{{$t('Games')}}</span>
                         </b-row>
                     </b-col>
                 </b-row>
@@ -44,10 +40,10 @@
                     </b-col>
                     <b-col class="content" scale="2" cols="9" sm="10">
                         <b-row class="title">
-                            <h3>24 - Hour</h3>
+                            <h3>{{$t('24 - Hour')}}</h3>
                         </b-row>
                         <b-row class="description">
-                            <p>24/7 access ensures operators' businesses runs smoothly all year long.</p>
+                            <p>{{$t("24/7 access ensures operators' businesses runs smoothly all year long.")}}</p>
                         </b-row>
                     </b-col>
                 </b-row>
@@ -57,10 +53,10 @@
                     </b-col>
                     <b-col class="content" cols="9" sm="10">
                         <b-row class="title">
-                            <h3>Design</h3>
+                            <h3>{{$t('Design')}}</h3>
                         </b-row>
                         <b-row class="description">
-                            <p>Combining imaginative universes, play dynamics, and unprecedented gameplay, our games transcend the boundaries of the virtual world by weaving innovative gameplay.</p>
+                            <p>{{$t('Combining imaginative universes, play dynamics, and unprecedented gameplay, our games transcend the boundaries of the virtual world by weaving innovative gameplay.')}}</p>
                         </b-row>
                     </b-col>
                 </b-row>
@@ -70,10 +66,10 @@
                     </b-col>
                     <b-col class="content" cols="9" sm="10">
                         <b-row class="title">
-                            <h3>Team</h3>
+                            <h3>{{$t('Team')}}</h3>
                         </b-row>
                         <b-row class="description">
-                            <p>Etech is an award-winning, international studio of designers, artists, animators and producers that create content for the biggest names in film and video games. </p>
+                            <p>{{$t('Etech is an award-winning, international studio of designers, artists, animators and producers that create content for the biggest names in film and video games.')}}</p>
                         </b-row>
                     </b-col>
                 </b-row>

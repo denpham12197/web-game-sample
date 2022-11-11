@@ -12,7 +12,7 @@
           <b-container class="center-panel">
               <!-- Greeting title -->
               <b-row class="greeting-title">
-                <h2>We’re Getting Ready</h2>
+                <h2>{{$t('We’re Getting Ready')}}</h2>
               </b-row>
               <div class="break"></div>
               <!-- Countdown box -->
@@ -21,25 +21,25 @@
                   <!-- Day -->
                   <b-col>
                     <b-row><span class="countdown-number">30</span></b-row>
-                    <b-row><span class="countdown-unit">Days</span></b-row>
+                    <b-row><span class="countdown-unit">{{$t('Days')}}</span></b-row>
                   </b-col>
                   <b-col cols="1"><span class="countdown-spacer">:</span></b-col>
                   <!-- Hour -->
                   <b-col>
                     <b-row><span class="countdown-number">18</span></b-row>
-                    <b-row><span class="countdown-unit">Hours</span></b-row>
+                    <b-row><span class="countdown-unit">{{$t('Hours')}}</span></b-row>
                   </b-col>
                   <b-col cols="1"><span class="countdown-spacer">:</span></b-col>
                   <!-- Minute -->
                   <b-col>
                     <b-row><span class="countdown-number">20</span></b-row>
-                    <b-row><span class="countdown-unit">Minutes</span></b-row>
+                    <b-row><span class="countdown-unit">{{$t('Minutes')}}</span></b-row>
                   </b-col>
                   <b-col cols="1"><span class="countdown-spacer">:</span></b-col>
                   <!-- Second -->
                   <b-col>
                     <b-row><span class="countdown-number">11</span></b-row>
-                    <b-row><span class="countdown-unit">Seconds</span></b-row>
+                    <b-row><span class="countdown-unit">{{$t('Second')}}</span></b-row>
                   </b-col>
                 </b-row>
               </b-row>
@@ -47,13 +47,11 @@
               <!-- Register email -->
               <b-row class="new-letter">
                 <b-row>
-                  <p>We will back to something amazing. 
-                    Getting the latest updates about our games. 
-                    Please sign up to our newsletter.</p>
+                  <p>{{$t('We will back to something amazing. Getting the latest updates about our games. Please sign up to our newsletter.')}}</p>
                 </b-row>
                 <b-row class="new-letter-input">
                   <b-input-group append="→" class="mb-2 mr-sm-2 mb-sm-0">
-                    <b-form-input  size="lg" placeholder="Enter your email"></b-form-input>
+                    <b-form-input  size="lg" :placeholder="$t('Enter your email')"></b-form-input>
                   </b-input-group>
                 </b-row>
 

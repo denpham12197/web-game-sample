@@ -2,12 +2,12 @@
     <b-container fluid class="products-wrapper">
         <b-container class="products-header">
             <b-row class="title justify-content-center">
-                <h2>Our Games</h2>
+                <h2>{{$t('Our Games')}}</h2>
             </b-row>
             <b-row class="description justify-content-center">
                 <b-col lg="8" md="12">
                     <p>
-                        As a pioneer of mobile app gamification, we take pride in originality and individuality, providing global players with state-of-the-art games that feature splendid storylines, sensational sound effects and magnificent animation that never cease to impress.
+                        {{$t('As a pioneer of mobile app gamification, we take pride in originality and individuality, providing global players with state-of-the-art games that feature splendid storylines, sensational sound effects and magnificent animation that never cease to impress.')}}
                     </p>
                  </b-col>
             </b-row>
@@ -22,7 +22,6 @@
                 />
                 </b-col>
             </b-row>
-            
         </b-container>
     </b-container>
 </template>

@@ -1,35 +1,8 @@
 <template>
     <b-container fluid class="our-partner-wrapper">
         <b-row class="title">
-            <h2>Our Partners</h2>
+            <h2>{{$t('Our Partners')}}</h2>
         </b-row>
-        <!-- <b-row class="mx-5 justify-content-md-center logo-slider-wrapper">
-            <b-col class="button-previous" align-self="center" cols="1">
-                <b-button class="button-slide"><b-icon class="icon-slide" icon="chevron-left" aria-hidden="true"></b-icon></b-button>
-            </b-col>
-            <b-col class="logo-slider" cols="10">
-                <b-row class="slider">
-                    <b-col xl="2" cols="3">
-                        <b-img src="./../assets/images/logos/eagames.png"/>
-                    </b-col>
-                    <b-col xl="2" cols="3">
-                        <b-img src="./../assets/images/logos/game.png"/>
-                    </b-col>
-                    <b-col xl="2" cols="3">
-                        <b-img src="./../assets/images/logos/first-power-up.png"/>
-                    </b-col>
-                    <b-col xl="2" cols="3">
-                        <b-img src="./../assets/images/logos/walt-disney.png"/>
-                    </b-col>
-                    <b-col xl="2" cols="3">
-                        <b-img src="./../assets/images/logos/book-pro.png"/>
-                    </b-col>
-                </b-row>
-            </b-col>
-            <b-col class="button-next" align-self="center" cols="1">
-                <b-button class="button-slide"><b-icon class="icon-slide" icon="chevron-right" aria-hidden="true"></b-icon></b-button>
-            </b-col>
-        </b-row> -->
         <div class="carousel-image">
             <div class="position-relative">
                 <div class="carousel-scroller">

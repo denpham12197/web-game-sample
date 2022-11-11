@@ -23,7 +23,7 @@
             <b-col xl="4" class="info-item address-wrapper" lg="12">
                 <b-col cols="12" md="10" class="mx-auto">
                     <b-row>
-                        <h2>Address</h2>
+                        <h2>{{$t('Address')}}</h2>
                     </b-row>
                     <b-row class="info-detail">
                         <b-col class="icon" cols="2" lg="3">
@@ -31,10 +31,10 @@
                         </b-col>
                         <b-col class="content" cols="10" lg="9">
                             <b-row>
-                                <p>Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US</p>
+                                <p>{{$t('Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US')}}</p>
                             </b-row>
                             <b-row>
-                                <p>20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam</p>
+                                <p>{{$t('20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam')}}</p>
                             </b-row>
                         </b-col>
                     </b-row>
@@ -44,7 +44,7 @@
                         </b-col>
                         <b-col class="content" cols="10" lg="9">
                             <b-row class="description">
-                                <p>(+1) 555-0108-000 or (+236) 555-0108</p>
+                                <p>{{$t('(+1) 555-0108-000 or (+236) 555-0108')}}</p>
                             </b-row>
                         </b-col>
                     </b-row>
@@ -53,14 +53,14 @@
             <b-col xl="4" class="info-item" lg="12">
                 <b-col col class="subcribe-wrapper mx-auto" cols="12" md="10">
                     <b-row class="w-100">
-                        <h2>Subcribe</h2>
+                        <h2>{{$t('Subscribe')}}</h2>
                     </b-row>
                     <b-row class="info-detail w-100">
                         <b-row class="info-subscribe">
-                            <p>Subscribe to our newsletter and be the first to know about our updates</p>
+                            <p>{{$t('Subscribe to our newsletter and be the first to know about our updates')}}</p>
                         </b-row>
                         <b-row class="info-subscribe">
-                            <b-form-input size="lg" placeholder="Enter your email" class="input-subscribe" />
+                            <b-form-input size="lg" :placeholder="$t('Enter your email')" class="input-subscribe" />
                         </b-row>
                     </b-row>
                 </b-col>
@@ -68,7 +68,7 @@
             </b-col>
         </b-row>
         <b-row class="copy-right">
-            <p>2017 Copyright. Policy.</p>
+            <p>{{$t('2017 Copyright. Policy.')}}</p>
         </b-row>
     </b-container>
 </template>
