@@ -167,6 +167,9 @@ export default {
     .left-box {
         margin-bottom: 5rem;
     }
+    .left-box .title h2 {
+        font-size: 3rem;
+    }
     .left-box .statistic h2 {
         font-size: 3rem;
     }

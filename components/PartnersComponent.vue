@@ -1,5 +1,5 @@
 <template>
-    <b-container fluid class="our-partner-wrapper">
+    <b-container fluid class="component-wrapper">
         <b-row class="title">
             <h2>{{$t('Our Partners')}}</h2>
         </b-row>
@@ -41,7 +41,7 @@
         name: "ListPartnersComponent"
     }
 </script>
-<style>
+<style scoped>
 .carousel-image {
     position: relative;
     max-width: 100%;
@@ -55,7 +55,7 @@
     max-width: 80%;
     margin: auto;
 }
-.image {
+.carousel-scroller .image {
     scroll-snap-align: center;
     flex: 1;
 }
@@ -64,7 +64,7 @@
     top: 25%;
     left: 20%;
 }
-.our-partner-wrapper {
+.component-wrapper {
     padding: 5rem 0;
     background: #F6F6F6;
     margin-top: 5rem;
@@ -75,15 +75,10 @@
 .btn-slide-right {
     right: 5rem;
 }
-.our-partner-wrapper .title {
+.component-wrapper .title {
     justify-content: center;
 }
-.our-partner-wrapper .button-slide {
-    background-color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-}
-.our-partner-wrapper .icon-slide {
+.component-wrapper .icon-slide {
     color: #c5c5c5;
     position: absolute;
     top: 45%;
@@ -97,19 +92,10 @@
     width: 100%;
     height: 100%;
 }
-.our-partner-wrapper .button-previous {
-    text-align: right;
+.title h2 {
+    font-size: 60px;
 }
-.our-partner-wrapper .button-next {
-    text-align: start;
-}
-.our-partner-wrapper .logo-slider {
-    display: flex;
-    overflow: hidden;
-}
-.logo-slider .slider {
-    flex-wrap: nowrap;
-}
+/*Responsive css*/
 @media only screen and (max-width: 992px) {
     .carousel-scroller {
         max-width: 95%
@@ -119,6 +105,9 @@
     }
     .btn-slide-right {
         right: 1.5rem;
+    }
+    .title h2 {
+        font-size: 3rem;
     }
 }
 </style>

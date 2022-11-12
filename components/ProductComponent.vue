@@ -2,7 +2,7 @@
     <b-card
         overlay
         :img-src="require(`~/assets/images/images/${src}`)"
-        class="product-item mb-2"
+        class="component-wrapper mb-2"
     >
         <div class="product-summary-text">
             <!-- Game title -->
@@ -39,15 +39,38 @@ export default {
 }
 </script>
 <style scoped>
-.product-item h2,
-.product-item p {
+.component-wrapper h2,
+.component-wrapper p {
     color: #FFFFFF;
+}
+.product-summary-text {
+    position: absolute;
+    bottom: 0;
 }
 .product-summary-text p {
     padding-right: 15px;
+    font-size: 1.2vw;
 }
+.product-summary-text h2 {
+    font-size: 3vw;
+}
+.component-wrapper {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (max-width: 992px) {
+    .product-summary-text h2 {
+        font-size: 1.5rem;
+    }
+    .product-summary-text p {
+        font-size: 0.7rem;
+    }
+}
+</style>
+<style>
 /*Deep css*/
-.product-item .card-img {
+.component-wrapper .card-img {
     border-radius: 20px;
 }
 </style>

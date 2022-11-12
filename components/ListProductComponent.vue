@@ -1,9 +1,12 @@
 <template>
-    <b-container fluid class="products-wrapper">
-        <b-container class="products-header">
+    <b-container fluid class="component-wrapper">
+        <!-- Product summary -->
+        <b-container class="product-summary">
+            <!-- Title -->
             <b-row class="title justify-content-center">
                 <h2>{{$t('Our Games')}}</h2>
             </b-row>
+            <!-- Description -->
             <b-row class="description justify-content-center">
                 <b-col lg="8" md="12">
                     <p>
@@ -12,9 +15,10 @@
                  </b-col>
             </b-row>
         </b-container>
+        <!-- List product -->
         <b-container fluid class="products-container">
             <b-row align-content="start">
-                <b-col v-for="(game, index) in data" :key="index" class="game-item-wrapper" lg="3" cols="6">
+                <b-col v-for="(game, index) in data" :key="index" class="product-box" lg="3" cols="6">
                     <ProductComponent
                     :src=game.src
                     :title=game.title
@@ -36,19 +40,19 @@ export default {
     }
 }
 </script>
-<style>
-.products-wrapper {
+<style scoped>
+.component-wrapper {
     margin-top: 10vw;
     padding: 0 3vw;
 }
-.products-header .title h2 {
+.product-summary .title h2 {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 900;
     font-size: 4rem;
     line-height: 60px;
 }
-.products-header .description p {
+.product-summary .description p {
     text-align: center;
     font-family: 'Montserrat';
     font-style: normal;
@@ -60,48 +64,26 @@ export default {
 .products-container {
     margin-top: 7vw;
 }
-
-.products-container .game-item {
-    border-radius: 20px;
-}
-.image-game {
-    position: absolute;
-}
-.game-intro-text {
-    position: absolute;
-    bottom: 0;
-    max-width: 20rem;
-}
-.game-item-wrapper {
+.product-box {
     padding: 1vw;
 }
-.game-item-wrapper:nth-child(2n) {
+.product-box:nth-child(2n) {
     margin-top: 5rem;
 }
-
-.game-intro-text h2 {
-    font-size: 3vw;
-}
-.game-intro-text p {
-    font-size: 14px;
-}
-
-
+/*Responsive css*/
 @media only screen and (max-width: 992px) {
-    .products-wrapper {
+    .component-wrapper {
         padding: 0 5vw;
     }
-    .game-item-wrapper {
+    .product-box {
         padding: 2vw;
     }
-    .game-intro-text h2 {
-        font-size: 3vw;
-    }
-    .game-intro-text p {
-        font-size: 12px;
-    }
-    .game-item-wrapper:nth-child(2n) {
+
+    .product-box:nth-child(2n) {
         margin-top: 2rem;
+    }
+    .product-summary .title h2 {
+        font-size: 3rem;
     }
 }
 </style>
