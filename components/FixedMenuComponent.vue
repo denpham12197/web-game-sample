@@ -9,18 +9,17 @@
         <!-- Responsive button language-->
         <b-dropdown class="btn-language-responsive" no-caret>
           <template #button-content>
-            <img src="./../assets/images/images/US.png"/>
+            <img v-if="$i18n.locale === 'en'" src="./../assets/images/images/US.png"/>
+            <img v-else src="./../assets/images/images/vietnam.png"/>
             <b-icon scale="0.7" class="icon-drop-down" icon="caret-down-fill"></b-icon>
           </template>
           <!-- EN -->
           <b-dropdown-item>
-            <img src="./../assets/images/images/US.png"/>
-            <nuxt-link :to="switchLocalePath('en')">{{$t('English')}}</nuxt-link>
+            <nuxt-link :to="switchLocalePath('en')" class="text-decoration-none"><img src="./../assets/images/images/US.png" class="mr-2"/>{{$t('English')}}</nuxt-link>
           </b-dropdown-item>
           <!-- VIE -->
           <b-dropdown-item>
-            <img src="./../assets/images/images/vietnam.png"/>
-            <nuxt-link :to="switchLocalePath('vie')">{{$t('Vietnamese')}}</nuxt-link>
+            <nuxt-link :to="switchLocalePath('vie')" class="text-decoration-none"><img src="./../assets/images/images/vietnam.png" class="mr-2"/>{{$t('Vietnamese')}}</nuxt-link>
           </b-dropdown-item>
         </b-dropdown>
       </b-navbar-brand>
@@ -43,20 +42,19 @@
           </b-navbar-nav>
           <!-- Select language -->
           <b-navbar-nav class="no-responsive-button">
-            <img src="./../assets/images/images/US.png"/>
+            <img v-if="$i18n.locale === 'en'" src="./../assets/images/images/US.png"/>
+            <img v-else src="./../assets/images/images/vietnam.png"/>
           </b-navbar-nav>
           <b-nav-item-dropdown
           class="no-responsive-button"
             right>
             <!-- EN -->
             <b-dropdown-item href="#">
-              <img src="./../assets/images/images/US.png"/>
-              <nuxt-link :to="switchLocalePath('en')">{{$t('English')}}</nuxt-link>
+              <nuxt-link :to="switchLocalePath('en')" class="text-decoration-none"><img src="./../assets/images/images/US.png" class="mr-2"/>{{$t('English')}}</nuxt-link>
             </b-dropdown-item>
             <!-- VIE -->
             <b-dropdown-item href="#">
-              <img src="./../assets/images/images/vietnam.png"/>
-              <nuxt-link :to="switchLocalePath('vie')">{{$t('Vietnamese')}}</nuxt-link>
+              <nuxt-link :to="switchLocalePath('vie')" class="text-decoration-none"><img src="./../assets/images/images/vietnam.png" class="mr-2"/>{{$t('Vietnamese')}}</nuxt-link>
             </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
@@ -103,6 +101,12 @@
 .btn-language-responsive .icon-drop-down {
   color: #000000;
   vertical-align: middle !important;
+}
+.text-decoration-none {
+  font-size: 14px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #000000;
 }
 
 /*Responsive css*/

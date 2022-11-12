@@ -37,9 +37,9 @@
     </b-container>
 </template>
 <script>
-    export default {
-        name: "ListPartnersComponent"
-    }
+export default {
+    name: "ListPartnersComponent"
+}
 </script>
 <style scoped>
 .carousel-image {
@@ -91,6 +91,7 @@
 .icon-slide div {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 .title h2 {
     font-size: 60px;

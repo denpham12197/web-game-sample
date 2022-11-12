@@ -1,5 +1,6 @@
 <template>
   <div class="web-game-wrapper">
+    <GotoTopBtnComponent/>
     <FixedMenuComponent />
     <HeaderThumbComponent />
     <AboutUsComponent/>
@@ -18,5 +19,6 @@ export default {
 .web-game-wrapper {
   overflow: hidden;
   min-width: 390px;
+  scroll-behavior: smooth;
 }
 </style>

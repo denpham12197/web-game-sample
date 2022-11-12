@@ -39,6 +39,9 @@ export default {
 }
 </script>
 <style scoped>
+.component-wrapper {
+    border-radius: 20px;
+}
 .component-wrapper h2,
 .component-wrapper p {
     color: #FFFFFF;
