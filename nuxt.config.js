@@ -40,7 +40,11 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    babel: {
+      compact: true,
+    },
+  },
   i18n: {
     locales: ['en', 'vie'],
     defaultLocale: 'en',
