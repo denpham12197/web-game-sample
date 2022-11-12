@@ -53,7 +53,7 @@ export default {
     position: fixed;
     bottom: 10vw;
     right: 3vw;
-    z-index: 3000;
+    z-index: 1000;
     padding: 10px;
 }
 .btn-icon {
