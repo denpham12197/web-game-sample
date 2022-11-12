@@ -27,12 +27,8 @@
 
       <!-- Button toggle right menu when responsive -->
       <b-navbar-toggle class="button-toggle"  target="nav-collapse" @click="isExpanded=!isExpanded">
-          <template v-if="isExpanded">
-            <b-icon  scale="1.5" class="menu-icon icon-close" icon="x-lg"/>
-          </template>
-          <template v-else>
-            <b-icon  scale="2" class="menu-icon" icon="list"/>
-          </template>
+            <b-icon  v-show="isExpanded" scale="1.5" class="menu-icon icon-close" icon="x-lg"/>
+            <b-icon v-show="!isExpanded"  scale="2" class="menu-icon" icon="list"/>
       </b-navbar-toggle>
 
       <!-- Right nav items -->
