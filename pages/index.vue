@@ -1,13 +1,15 @@
 <template>
-  <div class="web-game-wrapper">
-    <GotoTopBtnComponent/>
-    <FixedMenuComponent />
-    <HeaderThumbComponent />
-    <AboutUsComponent/>
-    <ListProductComponent/>
-    <PartnersComponent/>
-    <FooterComponent />
-  </div>
+  <client-only>
+    <div class="web-game-wrapper">
+      <GotoTopBtnComponent/>
+      <FixedMenuComponent />
+      <HeaderThumbComponent />
+      <AboutUsComponent/>
+      <ListProductComponent/>
+      <PartnersComponent/>
+      <FooterComponent />
+    </div>
+  </client-only>
 </template>
 
 <script>

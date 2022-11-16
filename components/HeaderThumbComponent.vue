@@ -19,25 +19,25 @@
               <b-row class="countdown-time">
                 <!-- Day -->
                 <b-col>
-                  <b-row><span class="number">30</span></b-row>
+                  <b-row><span class="number">{{days}}</span></b-row>
                   <b-row><span class="unit">{{$t('Days')}}</span></b-row>
                 </b-col>
                 <b-col cols="1"><span class="spacer">:</span></b-col>
                 <!-- Hour -->
                 <b-col>
-                  <b-row><span class="number">18</span></b-row>
+                  <b-row><span class="number">{{hours}}</span></b-row>
                   <b-row><span class="unit">{{$t('Hours')}}</span></b-row>
                 </b-col>
                 <b-col cols="1"><span class="spacer">:</span></b-col>
                 <!-- Minute -->
                 <b-col>
-                  <b-row><span class="number">20</span></b-row>
+                  <b-row><span class="number">{{minutes}}</span></b-row>
                   <b-row><span class="unit">{{$t('Minutes')}}</span></b-row>
                 </b-col>
                 <b-col cols="1"><span class="spacer">:</span></b-col>
                 <!-- Second -->
                 <b-col>
-                  <b-row><span class="number">11</span></b-row>
+                  <b-row><span class="number">{{seconds}}</span></b-row>
                   <b-row><span class="unit">{{$t('Second')}}</span></b-row>
                 </b-col>
               </b-row>
@@ -71,6 +71,27 @@
 <script>
   export default {
     name: "HeaderThumbComponent",
+    data() {
+        return {
+        days: '00',
+        hours: '00',
+        minutes: '00',
+        seconds: '00'
+      }
+    },
+    mounted() {
+      // Date expired
+      const expiredDate = new Date("2022-12-25T00:00:00.000Z");
+      // Countdown
+      setInterval(() => {
+        const now = new Date();
+        const time = expiredDate - now
+        this.days = Math.floor(time / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+        this.hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+        this.minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+        this.seconds = Math.floor((time % (1000 * 60)) / 1000).toString().padStart(2, '0');
+      }, 1000);
+    }
   }
 </script>
 <style scoped>
@@ -244,8 +265,6 @@
   .countdown-time .col,  .countdown-time .col-1{
     padding: 0 !important;
     flex-grow: 0.2;
-  }
-  .form-input input {
   }
 }
 </style>
