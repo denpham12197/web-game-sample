@@ -230,6 +230,7 @@
   }
   .spacer {
     line-height: 2.5rem;
+    font-size: 2rem;
   }
   .title h2 {
     font-size: 3rem;
