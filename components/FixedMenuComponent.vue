@@ -15,30 +15,50 @@
           </template>
           <!-- EN -->
           <b-dropdown-item>
-            <nuxt-link :to="switchLocalePath('en')" class="text-decoration-none"><img src="./../assets/images/images/US.png" class="mr-2"/>{{$t('English')}}</nuxt-link>
+            <nuxt-link :to="switchLocalePath('en')" class="text-decoration-none">
+              <b-row class="align-items-center">
+                <b-col cols="2" >
+                  <b-icon v-show="$i18n.locale === 'en'" scale="1.5" icon="check2"/>
+                </b-col>
+                <b-col cols="8">
+                  <img src="./../assets/images/images/US.png" class="mr-2"/>
+                  <span>{{$t('English')}}</span>
+                </b-col>
+              </b-row>
+            </nuxt-link>
           </b-dropdown-item>
           <!-- VIE -->
           <b-dropdown-item>
-            <nuxt-link :to="switchLocalePath('vie')" class="text-decoration-none"><img src="./../assets/images/images/vietnam.png" class="mr-2"/>{{$t('Vietnamese')}}</nuxt-link>
+            <nuxt-link :to="switchLocalePath('vie')" class="text-decoration-none">
+              <b-row class="align-items-center">
+                <b-col cols="2" >
+                  <b-icon v-show="$i18n.locale === 'vie'" scale="1.5" icon="check2"/>
+                </b-col>
+                <b-col cols="8">
+                  <img src="./../assets/images/images/vietnam.png" class="mr-2"/>
+                  <span>{{$t('Vietnamese')}}</span>
+                </b-col>
+              </b-row>
+            </nuxt-link>
           </b-dropdown-item>
         </b-dropdown>
       </b-navbar-brand>
 
       <!-- Button toggle right menu when responsive -->
-      <b-navbar-toggle class="button-toggle"  target="nav-collapse" @click="isExpanded=!isExpanded">
-            <b-icon  v-show="isExpanded" scale="1.5" class="menu-icon icon-close" icon="x-lg"/>
-            <b-icon v-show="!isExpanded"  scale="2" class="menu-icon" icon="list"/>
+      <b-navbar-toggle class="button-toggle"  target="nav-collapse" @click="expandMenu()">
+            <b-icon v-show="isExpanded" scale="1.5" class="menu-icon icon-close" icon="x-lg"/>
+            <b-icon v-show="!isExpanded" scale="2" class="menu-icon" icon="list"/>
       </b-navbar-toggle>
 
       <!-- Right nav items -->
       <b-collapse id="nav-collapse" class="right-menu" is-nav>
         <b-navbar-nav class="ml-auto">
           <!-- Nav menu -->
-          <b-navbar-nav>
-            <b-nav-item class="mx-5 menu-item" href="#"><span>{{$t('ABOUT US')}}</span></b-nav-item>
-            <b-nav-item class="mx-5 menu-item" href="#"><span>{{$t('GAMES')}}</span></b-nav-item>
-            <b-nav-item class="mx-5 menu-item" href="#"><span>{{$t('PARTNERS')}}</span></b-nav-item>
-            <b-nav-item class="mx-5 menu-item" href="#"><span>{{$t('CONTACT US')}}</span></b-nav-item>
+          <b-navbar-nav class="w-100 right-menu-container">
+            <b-nav-item class="menu-item" @click="scrollToAnchor('about-us')"><span>{{$t('ABOUT US')}}</span></b-nav-item>
+            <b-nav-item class="menu-item" @click="scrollToAnchor('games')"><span>{{$t('GAMES')}}</span></b-nav-item>
+            <b-nav-item class="menu-item" @click="scrollToAnchor('partners')"><span>{{$t('PARTNERS')}}</span></b-nav-item>
+            <b-nav-item class="menu-item" @click="scrollToAnchor('contact-us')"><span>{{$t('CONTACT US')}}</span></b-nav-item>
           </b-navbar-nav>
           <!-- Select language -->
           <b-navbar-nav class="no-responsive-button">
@@ -50,11 +70,31 @@
             right>
             <!-- EN -->
             <b-dropdown-item href="#">
-              <nuxt-link :to="switchLocalePath('en')" class="text-decoration-none"><img src="./../assets/images/images/US.png" class="mr-2"/>{{$t('English')}}</nuxt-link>
+              <nuxt-link :to="switchLocalePath('en')" class="text-decoration-none">
+                <b-row class="align-items-center">
+                  <b-col cols="2" >
+                    <b-icon v-show="$i18n.locale === 'en'" scale="1.5" icon="check2"/>
+                  </b-col>
+                  <b-col cols="8">
+                    <img src="./../assets/images/images/US.png" class="mr-2"/>
+                    <span>{{$t('English')}}</span>
+                  </b-col>
+                </b-row>
+              </nuxt-link>
             </b-dropdown-item>
             <!-- VIE -->
             <b-dropdown-item href="#">
-              <nuxt-link :to="switchLocalePath('vie')" class="text-decoration-none"><img src="./../assets/images/images/vietnam.png" class="mr-2"/>{{$t('Vietnamese')}}</nuxt-link>
+              <nuxt-link :to="switchLocalePath('vie')" class="text-decoration-none">
+                <b-row class="align-items-center">
+                  <b-col cols="2">
+                    <b-icon v-show="$i18n.locale === 'vie'" scale="1.5" icon="check2"/>
+                  </b-col>
+                  <b-col cols="8">
+                    <img src="./../assets/images/images/vietnam.png" class="mr-2"/>
+                    <span>{{$t('Vietnamese')}}</span>
+                  </b-col>
+                </b-row>
+              </nuxt-link>
             </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
@@ -70,7 +110,22 @@
       return {
         isExpanded: false
       }
-    }
+    },
+    methods: {
+      scrollToAnchor(anchor) {
+        const y = document.getElementById(anchor).getBoundingClientRect().top + window.scrollY - 80;
+        window.scroll({
+          top: y,
+          behavior: 'smooth'
+        });
+        if (this.isExpanded){
+          this.isExpanded = !this.isExpanded
+        }
+      },
+      expandMenu() {
+        this.isExpanded = !this.isExpanded
+      }
+    },
   }
 </script>
 <style scoped>
@@ -108,6 +163,11 @@
   font-weight: 700;
   color: #000000;
 }
+.right-menu-container {
+  justify-content: space-between;
+  margin-right: 3vw;
+  gap: 3rem;
+}
 
 /*Responsive css*/
 @media only screen and (max-width: 992px) {
@@ -137,6 +197,9 @@
   .menu-item:last-child {
     border-bottom: none
   }
+  .right-menu-container {
+    gap: 0;
+  }
 }
 </style>
 <style>
@@ -145,5 +208,13 @@
   background: #F6F6F6 !important;
   border-radius: 8px;
   border: 1px solid #AFAFAF;
+}
+.no-responsive-button .dropdown-menu,
+.btn-language-responsive .dropdown-menu {
+  min-width: 11rem;
+}
+.no-responsive-button .dropdown-menu .dropdown-item,
+.btn-language-responsive .dropdown-menu .dropdown-item {
+  padding: 0.25rem 1rem;
 }
 </style>

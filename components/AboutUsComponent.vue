@@ -1,5 +1,5 @@
 <template>
-    <b-container class="component-wrapper">
+    <b-container id="about-us" class="component-wrapper">
         <!-- Summary introduction -->
         <b-row class="mb-5">
             <!-- Left box -->

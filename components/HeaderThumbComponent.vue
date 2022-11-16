@@ -81,11 +81,12 @@
     },
     mounted() {
       // Date expired
-      const expiredDate = new Date("2022-12-25T00:00:00.000Z");
+      const expiredDate = new Date("2022-12-31T00:00:00.000Z");
       // Countdown
       setInterval(() => {
         const now = new Date();
         const time = expiredDate - now
+        // Get day, hour, minute, second and convert to 2 digit
         this.days = Math.floor(time / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
         this.hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
         this.minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');

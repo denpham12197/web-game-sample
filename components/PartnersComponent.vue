@@ -1,7 +1,7 @@
 <template>
     <b-container fluid class="component-wrapper">
         <b-row class="title">
-            <h2>{{$t('Our Partners')}}</h2>
+            <h2 id="partners">{{$t('Our Partners')}}</h2>
         </b-row>
         <div class="carousel-image">
             <div class="position-relative">

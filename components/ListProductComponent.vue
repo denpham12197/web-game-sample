@@ -1,5 +1,5 @@
 <template>
-    <b-container fluid class="component-wrapper">
+    <b-container id="games" fluid class="component-wrapper">
         <!-- Product summary -->
         <b-container class="product-summary">
             <!-- Title -->

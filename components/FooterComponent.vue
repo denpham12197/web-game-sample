@@ -1,5 +1,5 @@
 <template>
-    <b-container fluid class="component-wrapper">
+    <b-container id="contact-us" fluid class="component-wrapper">
         <!-- Main footer -->
         <b-row class="main-footer-container" align-h="center">
             <!-- Logos group -->
