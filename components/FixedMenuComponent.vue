@@ -171,6 +171,9 @@
 
 /*Responsive css*/
 @media only screen and (max-width: 992px) {
+  .logo {
+    scale: 0.7;
+  }
   .menu-item span {
     color: #000000;
   }
@@ -211,10 +214,10 @@
 }
 .no-responsive-button .dropdown-menu,
 .btn-language-responsive .dropdown-menu {
-  min-width: 11rem;
+  min-width: 12rem;
 }
 .no-responsive-button .dropdown-menu .dropdown-item,
 .btn-language-responsive .dropdown-menu .dropdown-item {
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.7rem;
 }
 </style>

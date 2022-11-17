@@ -67,20 +67,22 @@ export default {
 .product-box {
     padding: 1vw;
 }
-.product-box:nth-child(2n) {
-    margin-top: 5rem;
+.product-box:nth-child(2n+1) {
+    margin-top: -5rem;
 }
 /*Responsive css*/
 @media only screen and (max-width: 992px) {
     .component-wrapper {
         padding: 0 5vw;
     }
+    .products-container {
+        margin-top: 15vw;
+    }
     .product-box {
         padding: 2vw;
     }
-
-    .product-box:nth-child(2n) {
-        margin-top: 2rem;
+    .product-box:nth-child(2n+1) {
+        margin-top: -2rem;
     }
     .product-summary .title h2 {
         font-size: 3rem;

@@ -57,6 +57,8 @@
                 </b-input-group>
               </b-row>
             </b-row>
+            <div class="oval-opacity">
+            </div>
           </div>
         </div>
       </b-row>
@@ -134,13 +136,25 @@
   justify-content: center;
   z-index: 1;
 }
+.oval-opacity {
+  top: 45%;
+  width: 40%;
+  height: 50%;
+  min-width: 30rem;
+  min-height: 16rem;
+  position: absolute;
+  background: radial-gradient(27.72% 27.79% at 50.81% 68.15%, #210544 0%, rgba(23, 5, 68, 0.71) 50.52%, rgba(23, 5, 68, 0) 100%);
+  mix-blend-mode: normal;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+  border-radius: 50%;
+}
 .countdown-time {
   padding: 0 4vw;
   flex: 1;
   width: 100%;
   justify-content: center;
 }
-
 .number,
 .unit,
 .spacer {
@@ -178,12 +192,13 @@
 }
 .new-letter-container {
   width: 35%;
+  justify-content: center;
 }
 .new-letter-container p {
   font-family: 'Montserrat';
   text-align: center;
   color: #FFFFFF;
-  font-size: 1.5vw;
+  font-size: 18px;
 }
 
 .form-input {
@@ -194,10 +209,10 @@
 }
 .fairy-image {
   width: 100%;
-  scale: 0.5;
+  scale: 0.35;
   position: absolute;
-  top: -25vw;
-  left: -25vw;
+  top: -15vw;
+  left: -33vw;
 }
 .input-icon-arrow {
   position: absolute;
@@ -214,15 +229,14 @@
     margin-bottom: 0;
   }
   .timer-box {
-    top: -35rem;
+    top: -32rem;
     left: 0;
   }
   .countdown-time {
     padding: 0;
   }
-
   .countdown-box {
-    width: 80%;
+    width: 100%;
   }
   .number {
     line-height: 3rem;
@@ -233,25 +247,27 @@
     font-size: 2rem;
   }
   .title h2 {
-    font-size: 3rem;
+    font-size: 40px;
   }
   .new-letter-container {
-    width: 80%;
+    margin-top: 40px;
+    width: 100%;
   }
   .new-letter-container p {
-    font-size: 1.1rem;
+    text-align: center;
+    font-size: 12px;
   }
   .form-input input {
     height: 4rem;
   }
   .fairy-image {
     position: static;
-    margin-top: -15rem;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-top: -10rem;
+    margin-left: -5vw;
     min-height: 20rem;
     min-width: 30rem;
-    scale: 0.75
+    scale: 0.6;
+    z-index: 1;
   }
 }
 </style>
@@ -262,6 +278,9 @@
 }
 .new-letter-container .row {
   margin: 0;
+}
+.form-input input {
+  border-radius: 8px !important;
 }
 @media only screen and (max-width: 992px) {
   .countdown-time .col,  .countdown-time .col-1{

@@ -52,10 +52,11 @@ export default {
 }
 .product-summary-text p {
     padding-right: 15px;
-    font-size: 1.2vw;
+    font-size: 14px;
+    width: 95%;
 }
 .product-summary-text h2 {
-    font-size: 3vw;
+    font-size: 48px;
 }
 .component-wrapper {
     border: none;
@@ -63,11 +64,15 @@ export default {
     padding: 0;
 }
 @media only screen and (max-width: 992px) {
+    .component-wrapper {
+        border-radius: 5px;
+    }
     .product-summary-text h2 {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
     .product-summary-text p {
-        font-size: 0.7rem;
+        font-size: 12px;
+        width: 100%;
     }
 }
 </style>
@@ -75,5 +80,11 @@ export default {
 /*Deep css*/
 .component-wrapper .card-img {
     border-radius: 20px;
+}
+@media only screen and (max-width: 992px) {
+    .component-wrapper .card-img {
+        border-radius: 10px;
+        min-height: 250px
+    }
 }
 </style>

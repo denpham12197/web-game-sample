@@ -125,6 +125,7 @@ export default {
     font-weight: 700;
     color: #079BEE;
     font-size: 4vw;
+    word-spacing: -15px
 }
 .left-box .description p,
 .right-box .description p {
@@ -164,6 +165,9 @@ export default {
 
 /*Responsive css*/
 @media only screen and (max-width: 992px) {
+    .component-wrapper {
+        margin-top: -40px;
+    }
     .left-box {
         margin-bottom: 5rem;
     }
