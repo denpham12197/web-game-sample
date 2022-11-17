@@ -8,7 +8,7 @@
       <!-- Center countdown group -->
       <b-row class="justify-content-center w-100">
         <div class="position-relative w-100">
-          <div class="timer-box px-5">
+          <div class="timer-box px-3">
             <!-- Greeting title -->
             <b-row class="title">
               <h2>{{$t('We’re Getting Ready')}}</h2>
@@ -178,7 +178,7 @@
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 3.5rem;
-  line-height: 4vw;
+  line-height: 6vw;
 }
 .title {
   margin-bottom: 1vw;
@@ -243,7 +243,7 @@
     font-size: 2rem;
   }
   .spacer {
-    line-height: 2.5rem;
+    line-height: 4rem;
     font-size: 2rem;
   }
   .title h2 {

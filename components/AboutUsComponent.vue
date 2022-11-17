@@ -46,7 +46,7 @@
                 <!-- Section 1 -->
                 <b-row>
                     <b-col sm="2" cols="3">
-                        <b-avatar variant="info" icon="calendar2-day-fill" class="right-box-icon mr-3"></b-avatar>
+                        <b-avatar size="3em" src="./../assets/images/icons/calendar-tick.png" class="right-box-icon mr-3"></b-avatar>
                     </b-col>
                     <b-col scale="2" cols="9" sm="10">
                         <b-row class="title">
@@ -60,7 +60,7 @@
                 <!-- Section 2 -->
                 <b-row>
                     <b-col sm="2" cols="3">
-                        <b-avatar variant="info" icon="stack" class="right-box-icon mr-3"></b-avatar>
+                        <b-avatar size="3em" src="./../assets/images/icons/pen-tool-2.png" class="right-box-icon mr-3"></b-avatar>
                     </b-col>
                     <b-col sm="10" cols="9">
                         <b-row class="title">
@@ -74,7 +74,7 @@
                 <!-- Section 3 -->
                 <b-row>
                     <b-col sm="2" cols="3">
-                        <b-avatar variant="info" icon="people-fill" class="right-box-icon mr-3"></b-avatar>
+                        <b-avatar size="3em" src="./../assets/images/icons/people.png" class="right-box-icon mr-3"></b-avatar>
                     </b-col>
                     <b-col sm="10" cols="9">
                         <b-row class="title">
@@ -178,10 +178,23 @@ export default {
         font-size: 3rem;
     }
     .pin-map-image {
-        margin-top: -25vw;
+        margin-top: -18vw;
     }
     .witch-image-wrapper {
         margin-top: -15vw;
     }
+    .witch-image {
+        scale: 0.8;
+        min-width: 25rem;
+        min-height: 20rem;
+    }
+}
+</style>
+<style>
+.right-box-icon {
+    background-color: #e3fcff !important;
+}
+.right-box-icon img {
+    scale: 0.55;
 }
 </style>
