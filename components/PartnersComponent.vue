@@ -58,6 +58,7 @@ export default {
 }
 .carousel-scroller {
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     overflow-x: hidden;
     overflow-y: hidden;
     display: flex;
