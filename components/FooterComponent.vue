@@ -152,6 +152,9 @@
     scale: 1.5;
     z-index: 3;
   }
+  .form-input {
+    border-radius: 8px !important;
+}
 /*Responsive css*/
 @media only screen and (max-width: 992px) {
     .copy-right {

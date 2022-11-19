@@ -3,123 +3,99 @@
         <b-row class="title">
             <h2 id="partners">{{$t('Our Partners')}}</h2>
         </b-row>
-        <div class="carousel-image">
-            <div class="position-relative">
-                <div class="carousel-scroller">
-                    <div class="image">
-                        <b-img src="./../assets/images/logos/eagames.png"/>
+        <div class="carousel-image-container">
+            <div class="carousel-wrapper">
+                <VueSlickCarousel v-bind="slickOptions">
+                    <div v-for="(image, index) in listPartnersImg" :key="index">
+                        <b-img class="carousel-img" :src="require(`~/assets/images/logos/${image}`)"/>
                     </div>
-                    <div class="image">
-                        <b-img src="./../assets/images/logos/game.png"/>
-                    </div>
-                    <div class="image">
-                        <b-img src="./../assets/images/logos/first-power-up.png"/>
-                    </div>
-                    <div class="image">
-                        <b-img src="./../assets/images/logos/walt-disney.png"/>
-                    </div>
-                    <div class="image">
-                        <b-img src="./../assets/images/logos/book-pro.png"/>
-                    </div>
-                </div>
-            </div>
-            <span class="icon-slide btn-slide-left" @click="scrollLeft()">
-                <div class="position-relative">
-                    <b-icon class="btn-icon" icon="chevron-left" aria-hidden="true"/>
-                </div>
-            </span>
-            <span class="icon-slide btn-slide-right" @click="scrollRight()">
-                <div class="position-relative">
-                    <b-icon class="btn-icon" icon="chevron-right" aria-hidden="true"/>
-                </div>
-            </span>
+                </VueSlickCarousel>
+              </div>
         </div>
     </b-container>
 </template>
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
     name: "ListPartnersComponent",
-    methods: {
-        scrollLeft(){
-            const carousel = document.getElementsByClassName('carousel-scroller')[0];
-            carousel.scrollLeft -= 260
-        },
-        scrollRight() {
-            const carousel = document.getElementsByClassName('carousel-scroller')[0];
-            carousel.scrollLeft += 260
-        }
+    components: { VueSlickCarousel },
+    data() {
+      return {
+        slickOptions: {
+            slidesToShow: 5,
+            centerMode: true,
+            slidesToScroll: 1,
+            swipeToSlide: true,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        centerMode: true,
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        centerMode: true,
+                        slidesToShow: 1,
+                        
+                    }
+                },
+        ]},
+        listPartnersImg: [
+            'eagames.png',
+            'game.png',
+            'first-power-up.png',
+            'walt-disney.png',
+            'book-pro.png'
+        ]
+      }
     }
 }
 </script>
 <style scoped>
-.carousel-image {
+.carousel-image-container {
     position: relative;
     max-width: 100%;
-}
-.carousel-scroller {
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    display: flex;
-    align-items: center;
-    max-width: 80%;
-    margin: auto;
-}
-.carousel-scroller .image {
-    scroll-snap-align: center;
-    flex: 1;
-}
-.btn-icon {
-    position: absolute;
-    top: 25%;
-    left: 20%;
 }
 .component-wrapper {
     padding: 5rem 0;
     background: #F6F6F6;
     margin-top: 5rem;
 }
-.btn-slide-left {
-    left: 5rem;
-}
-.btn-slide-right {
-    right: 5rem;
-}
 .component-wrapper .title {
     justify-content: center;
-}
-.component-wrapper .icon-slide {
-    color: #c5c5c5;
-    position: absolute;
-    top: 45%;
-    transform: translateY(-45%);
-    height: 30px;
-    width: 30px;
-    background-color: #FFFFFF;
-    border-radius: 5px;
-}
-.icon-slide div {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+    margin-bottom: 30px;
 }
 .title h2 {
     font-size: 60px;
 }
 /*Responsive css*/
 @media only screen and (max-width: 992px) {
-    .carousel-scroller {
-        max-width: 95%
-    }
-    .btn-slide-left {
-        left: 1.5rem;
-    }
-    .btn-slide-right {
-        right: 1.5rem;
-    }
     .title h2 {
         font-size: 3rem;
     }
+    .carousel-img {
+        margin: auto;
+        scale: 1;
+    }
+}
+</style>
+<style>
+.slick-arrow {
+    position: absolute;
+    scale: 1.5;
+    opacity: 1;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    z-index: 1;
+}
+.slick-prev {
+    left: 7vw;
+}
+.slick-next {
+    right: 7vw;
 }
 </style>
