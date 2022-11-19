@@ -106,7 +106,7 @@
   margin-bottom: 5rem;
 }
 .background-image {
-  min-height: 75vh;
+  min-height: 40rem;
   object-fit: cover;
   overflow: hidden;
 }
@@ -229,7 +229,7 @@
     margin-bottom: 0;
   }
   .timer-box {
-    top: -55vh;
+    top: -32rem;
     left: 0;
   }
   .countdown-time {
