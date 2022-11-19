@@ -23,12 +23,12 @@
                     </div>
                 </div>
             </div>
-            <span class="icon-slide btn-slide-left">
+            <span class="icon-slide btn-slide-left" @click="scrollLeft()">
                 <div class="position-relative">
                     <b-icon class="btn-icon" icon="chevron-left" aria-hidden="true"/>
                 </div>
             </span>
-            <span class="icon-slide btn-slide-right">
+            <span class="icon-slide btn-slide-right" @click="scrollRight()">
                 <div class="position-relative">
                     <b-icon class="btn-icon" icon="chevron-right" aria-hidden="true"/>
                 </div>
@@ -38,7 +38,17 @@
 </template>
 <script>
 export default {
-    name: "ListPartnersComponent"
+    name: "ListPartnersComponent",
+    methods: {
+        scrollLeft(){
+            const carousel = document.getElementsByClassName('carousel-scroller')[0];
+            carousel.scrollLeft -= 260
+        },
+        scrollRight() {
+            const carousel = document.getElementsByClassName('carousel-scroller')[0];
+            carousel.scrollLeft += 260
+        }
+    }
 }
 </script>
 <style scoped>
