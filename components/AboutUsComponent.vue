@@ -157,7 +157,7 @@ export default {
 .pin-map-image {
     min-width: 25rem;
     min-height: 8rem;
-    margin-top: -20vw;
+    margin-top: -15vw;
 }
 .statistic sub {
     font-size: 50%;

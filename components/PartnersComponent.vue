@@ -50,7 +50,12 @@ export default {
             'game.png',
             'first-power-up.png',
             'walt-disney.png',
-            'book-pro.png'
+            'book-pro.png',
+            'eagames.png',
+            'game.png',
+            'first-power-up.png',
+            'walt-disney.png',
+            'book-pro.png',
         ]
       }
     }
@@ -59,7 +64,8 @@ export default {
 <style scoped>
 .carousel-image-container {
     position: relative;
-    max-width: 100%;
+    max-width: 95%;
+    margin: auto;
 }
 .component-wrapper {
     padding: 5rem 0;
@@ -75,6 +81,9 @@ export default {
 }
 /*Responsive css*/
 @media only screen and (max-width: 992px) {
+    .carousel-image-container {
+        max-width: 100%;
+    }
     .title h2 {
         font-size: 3rem;
     }
@@ -93,9 +102,24 @@ export default {
     z-index: 1;
 }
 .slick-prev {
-    left: 7vw;
+    left: 3vw;
 }
 .slick-next {
-    right: 7vw;
+    right: 3vw;
+}
+.slick-slide div div {
+    display: flex !important;
+    justify-content: center;
+}
+.slick-slide div div img {
+    scale: 0.9;
+}
+@media only screen and (max-width: 992px) {
+    .slick-prev {
+        left: 7vw;
+    }
+    .slick-next {
+        right: 7vw;
+    }
 }
 </style>

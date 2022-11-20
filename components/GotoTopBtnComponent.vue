@@ -1,7 +1,7 @@
 <template>
     <div class="btn-go-to-top">
         <b-button class="btn-icon-container">
-            <b-icon v-if="isArrowDown" class="btn-icon" icon="chevron-down"></b-icon>
+            <b-icon v-if="isArrowDown" class="btn-icon" icon="chevron-down" @click="gotoBottom()"></b-icon>
             <b-icon v-else class="btn-icon" icon="chevron-up" @click="gotoTop()"></b-icon>
         </b-button>
     </div>
@@ -44,6 +44,11 @@ export default {
                 top: 0,
                 behavior: 'smooth'
             })
+        },
+        gotoBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'});
         }
     }
 }

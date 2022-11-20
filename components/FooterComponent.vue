@@ -136,6 +136,7 @@
 .logo-container .logo {
     display: block;
     max-width: fit-content;
+    margin-bottom: 10px;
 }
 .logo-container .logo-group {
     display: flex;
